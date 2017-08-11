@@ -34,7 +34,65 @@ $global-position: 16px;
 // 3. Title
 // ---------
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: $body-font-family;
-  font-size: 65px;
+  font-size: 16px;
+  line-height: $global-lineheight;
+  color: $body-font-color;
+  background: #ccc;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $title-font-family;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 44.5px;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+img {
+  display: block;
+}
+
+section {
+  padding: 90px 0;
+}
+
+.conteiner {
+  width: $global-width;
+  margin: 0 auto;
+  box-sizing: border-box;
+  @extend %clear;
+}
+
+.main-block__dickription {
+  font-family: $latolight;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.btn {
+  width: 370px;
+  height: 58px;
+  border-radius: 3px;
+  color: $white;
+  background: $red;
 }

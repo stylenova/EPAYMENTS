@@ -1,0 +1,100 @@
+.header {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  z-index: 1;
+  padding: 40px 0;
+  background: $white;
+  nav {
+    position: relative;
+    width: 51%;
+    float: right;
+    padding: 18px 0;
+  }
+}
+
+.logo {
+  width: 40%;
+  float: left;
+  img {
+    width: 450px;
+    height: 53px;
+  }
+}
+
+.menu-icon {
+    display: none;
+    width: 45px;
+    height: 35px;
+    position: relative;
+    cursor: pointer;
+    span {
+      display: block;
+      position: absolute;
+      height: 9px;
+      width: 100%;
+      background: #333333;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+      &:nth-child(1) {
+        top: 0px;
+      }
+      &:nth-child(2),
+      .menu-icon span:nth-child(3) {
+        top: 13px;
+      }
+      &:nth-child(4) {
+        top: 26px;
+      }
+    }
+  }
+
+.menu {
+  width: 100%;
+  @include rul;
+  @include justify;  
+  .menu__item {
+    display: inline-block;
+    font-size: 16px;
+    opacity: 1;
+  }
+  .menu__link {
+    position: relative;
+    font-size: 17px;
+    color: #666666;
+    text-transform: uppercase;
+  }
+  .registration:before {
+    @include pseudo;
+    top: -7px;
+    left: -20px;
+    width: 16px;
+    height: 23px;
+    background: url("/img/icon/icon-castle.png");
+  }
+}
+
+.menu-state-open .menu-icon {
+  span {
+    &:nth-child(1) {
+      top: 18px;
+      width: 0%;
+      left: 50%;
+    }
+    &:nth-child(2) {
+      transform: rotate(45deg);
+    }
+    &:nth-child(3) {
+      top: 12px;
+      transform: rotate(-45deg);
+    }
+    &:nth-child(4) {
+      top: 18px;
+      width: 0%;
+      left: 50%;
+    }
+  }
+}

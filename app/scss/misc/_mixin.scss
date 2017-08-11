@@ -26,10 +26,9 @@
 
 @mixin justify {
   text-align: justify;
-  line-height: 0;
   font-size: 0;
   text-justify: newspaper;
-  zoom: 1;
+  zoom: 0;
   text-align-last: justify;
 
   &:after {
@@ -88,10 +87,11 @@
 
 // Поведение при наведении на ссылку
 // пример: @include hov-a(none,$red);
-@mixin hov-a($under: none, $color: #002aff) {
+@mixin hov-a($under: none, $backdrop: rgba(42, 42, 42, 0.5)) {
   &:hover, &:focus {
     text-decoration: $under;
-    color: $color;
+    background: $backdrop;
+    transition:all 300ms linear;
   }    
 }  
 

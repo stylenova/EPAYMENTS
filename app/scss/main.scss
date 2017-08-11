@@ -3,6 +3,17 @@
 @import "misc/_mixin";
 @import "_settings";
 
-// Pages or blocks
+// Header
 @import "blocks/_header";
+
+// Pages
+@import "blocks/_main-p";
+@import "blocks/_about-p";
+@import "blocks/_how-p";
+@import "blocks/_contancts-p";
+
+// Footer
 @import "blocks/_footer";
+
+// Media
+@import "misc/_media";

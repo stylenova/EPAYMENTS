@@ -1,0 +1,71 @@
+// max-width: 1170
+@media (max-width: 1170px) {
+  .conteiner {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .header {
+    .logo {
+      padding-left: 20px;
+    }
+    nav {
+      text-align: right;
+      padding-top: 8px;
+      padding-bottom: 0;
+      .menu {
+        position: fixed;
+        display: block;
+        top: 174px;
+        right: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.95);
+        z-index: 1000;
+        opacity: 0;
+        overflow: auto;
+        text-align-last: center;
+        padding: 20px 0;
+        transition:all 100ms linear;
+      }
+      .menu-icon {
+        display: inline-block;
+      }
+      .menu__item {
+        display: block;
+      }
+      .menu__link {
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+        color: $white;
+        @include hov-a;
+      }
+    }
+    nav.menu-state-open {
+      .menu {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// max-width: 992
+@media (max-width: 992px) {
+  .conteiner {
+    width: 100%;
+  }
+}
+
+// max-width: 768
+@media (max-width: 768px) {
+  .conteiner {
+    width: 100%;
+  }
+}
+
+// max-width: 480
+@media (max-width: 480px) {
+  .conteiner {
+    width: 100%;
+  }
+}
