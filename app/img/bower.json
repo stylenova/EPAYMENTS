@@ -1,0 +1,19 @@
+{
+  "name": "Epayments",
+  "authors": [
+    "Sergei Osipenko <stylenova@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower",
+    "test",
+    "tests"
+  ]
+}

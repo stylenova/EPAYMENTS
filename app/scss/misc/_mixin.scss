@@ -1,0 +1,216 @@
+// clearfix очистка обтекаемоссти
+// пример: @include clear;
+
+%clear {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// Псевдо, при использовании ::before и ::after
+// пример: @include pseudo(inline-block,relative,'next');
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+// горизонтальное выравнивание для inline блока 
+// пример: @include justify;
+
+@mixin justify {
+  text-align: justify;
+  line-height: 0;
+  font-size: 0;
+  text-justify: newspaper;
+  zoom: 1;
+  text-align-last: justify;
+
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+  }
+}
+
+// вертикальное выравнивание для inline блока (блок остаеться в пококе)
+// пример: @include vertical;
+
+@mixin vertical {
+	position: absolute;
+	top: 0;
+	bottom: 0px;
+	left: 0;
+	right: 0;
+	// если удалить все выще можно использовать для выравнивания текста по центру блока
+  text-align: center;
+  font-size: 0;
+
+  &:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
+  }
+}
+
+// Горизонтальная линия
+// пример: @include sep-h(80%,2px,blue);
+@mixin sep-h($w,$h,$color) {
+	&:after {
+		content: "";
+		display: block;
+		height: $h;
+		width: $w;
+		margin: 0 auto;
+		background-color: $color;
+	}
+}
+
+
+// Сброс параметров списка
+// пример: @include rul;
+@mixin rul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// Поведение при наведении на ссылку
+// пример: @include hov-a(none,$red);
+@mixin hov-a($under: none, $color: #002aff) {
+  &:hover, &:focus {
+    text-decoration: $under;
+    color: $color;
+  }    
+}  
+
+// эффект при наведении
+// пример: @include hov1;
+@mixin hov1 {
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// создать круг
+// пример @include circle(100px; yellow);
+@mixin circle($width, $color) {
+  width: $width;
+  height: $width;
+  border-radius: $width/2;
+  background-color: $color;
+}
+
+// создать треугольник
+// @include triangle(60px, up, yellow);
+@mixin triangle($width, $dir, $color) {
+  width: 0;
+  height: 0;
+  display: block;
+  @if $dir == up {
+    border-left: $width solid transparent;
+    border-right: $width solid transparent;
+    border-bottom: $width solid $color;
+  } @else if $dir == down {
+    border-left: $width solid transparent;
+    border-right: $width solid transparent;
+    border-top: $width solid $color;
+  } @else if $dir == left {
+    border-top: $width solid transparent;
+    border-bottom: $width solid transparent;
+    border-right: $width solid $color;
+  } @else if $dir == right {
+    border-top: $width solid transparent;
+    border-bottom: $width solid transparent;
+    border-left: $width solid $color;
+  }
+}
+
+// media 
+// @include desktop { указать нужные классы стили }
+@mixin desktop {
+  @media  only screen and (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media  only screen and (max-width: 992px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media  only screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin phone {
+  @media  only screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+
+// input style custom
+// пример: @include input($green,$black,$black,.5s);
+@mixin input($bsh: transparentize(blue,.3), $bdc: gray, $pl: gray, $timetransit: .15s){
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid $bdc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 0 1px $bdc;
+					box-shadow: inset 0 0 1px $bdc;
+	-webkit-transition: border-color ease-in-out $timetransit, -webkit-box-shadow ease-in-out $timetransit;
+			 -o-transition: border-color ease-in-out $timetransit, box-shadow ease-in-out $timetransit;
+					transition: border-color ease-in-out $timetransit, box-shadow ease-in-out $timetransit;
+	&:focus {
+		border-color: $bsh;
+		outline: 0;
+		-webkit-box-shadow: inset 0 0 1px $bdc, 0 0 8px $bsh;
+						box-shadow: inset 0 0 1px $bdc, 0 0 8px $bsh;
+	}
+	&::-moz-placeholder{
+		color: $pl;
+		opacity: 1;
+	}
+	&:-ms-input-placeholder{
+		color: $pl;
+	}
+	&::-webkit-input-placeholder{
+		color: $pl;
+	}
+	&::-ms-expand{
+		background-color: transparent;
+		border: 0;
+	}
+}
+
+
+// цветовые примеси
+@function color($group, $shade: normal, $transparency: 1){
+	@each $color in $color-stack {
+		$c-group: map-get($color, group);
+		$c-shade: map-get($color, id);
+
+		@if $group == map-get($color, group) and $shade == map-get($color, id){
+			@return rgba(map-get($color, color), $transparency);
+		}
+	}
+}

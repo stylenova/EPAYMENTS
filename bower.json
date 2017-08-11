@@ -1,0 +1,23 @@
+{
+  "name": "webgulp",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "krabaton"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "normalize-css": "normalize.css#^6.0.0",
+    "font-awesome": "^4.7.0"
+  }
+}
