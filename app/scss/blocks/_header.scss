@@ -98,3 +98,47 @@
     }
   }
 }
+
+// Mein block
+.main-block {
+  width: 100%;
+  height: auto;
+  background: url('/img/background/bg-main.jpg')no-repeat center;
+  background-size: cover;
+  color: $white;
+  .conteiner {
+    padding-top: 275px;
+  }
+  p {
+    line-height: 36px;
+    margin-bottom: 30px;
+  }
+}
+
+.main-block__h1 {
+  position: relative;
+  line-height: 1;
+  margin-bottom: 17px;
+
+  &::before {
+    @include pseudo;
+    top: -105px;
+    left: 50%;
+    right: 50%;
+    background: url("/img/icon/icon-phone-money.png")no-repeat;
+    width: 172px;
+    height: 446px;
+    transform: translate(-50%);
+  } 
+}
+
+.main-block__logo-phone {
+  img {
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+}
+
+.main-block__btn {
+  text-align: center;
+}

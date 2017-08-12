@@ -22,13 +22,13 @@
         top: 174px;
         right: 0;
         left: 0;
-        background-color: rgba(0, 0, 0, 0.95);
+        background-color: rgba(16, 23, 33, 0.97);
         z-index: 1000;
         opacity: 0;
         overflow: auto;
         text-align-last: center;
         padding: 20px 0;
-        transition:all 100ms linear;
+        transition: all 100ms linear;
       }
       .menu-icon {
         display: inline-block;
@@ -41,7 +41,7 @@
         padding: 10px 0;
         text-align: center;
         color: $white;
-        @include hov-a;
+        @include hov-a(none, rgba(255, 255, 255, 0.02));
       }
     }
     nav.menu-state-open {
@@ -59,7 +59,10 @@
   }
   .header {
     nav {
-      width: 15%; 
+      width: 15%;
+      .menu {
+        top: 170px;
+      }
     }
   }
 }
@@ -74,6 +77,18 @@
       width: 55%;
     }
   }
+  .main-block {
+    .main-block__h1 {
+      font-size: 33.5px;
+      margin-bottom: 35px;
+    }
+    p {
+      font-size: 24px;
+    }
+    .main-block__logo-phone img {
+      max-width: 100%;
+    }
+  }
 }
 
 // max-width: 480
@@ -85,6 +100,11 @@
     .logo {
       width: 70%;
       padding-top: 12px;
+    }
+  }
+  .main-block {
+    .btn {
+      width: 100%;
     }
   }
 }

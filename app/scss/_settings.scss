@@ -7,33 +7,55 @@ $bark-gray: #999999;
 $bark-blue :#1c202b;
 $black: #000000;
 $white: #ffffff;
-
 // нужно для миксина, цветовые примеси
-$color-stack: (group: orange, id: normal, color: #e67835), (group: orange, id: pale, color: #f8a878), (group: orange, id: dark, color: #ad490c), (group: blue, id: normal, color: #426682);
-
-
+$color-stack: (group: orange, id: normal, color: #e67835),
+(group: orange, id: pale, color: #f8a878),
+(group: orange, id: dark, color: #ad490c),
+(group: blue, id: normal, color: #426682);
 // 2. Global
 // ---------
 $global-font-size: 16px;
 $global-width: 1170px;
 $global-lineheight: 1.5;
 $body-font-color: $black;
-$body-font-family: 'latoregular', Helvetica, Arial, sans-serif;
-$latosemibold_italic: 'latosemibold_italic', Helvetica, Arial, sans-serif;
-$latolight_italic: 'latolight_italic', Helvetica, Arial, sans-serif;
-$latolight: 'latolight', Helvetica, Arial, sans-serif;
-$latoitalic: 'latoitalic', Helvetica, Arial, sans-serif;
-$latobold_italic: 'latobold_italic', Helvetica, Arial, sans-serif;
-$latobold: 'latobold', Helvetica, Arial, sans-serif;
-$title-font-family: 'proxima', Helvetica, Arial, sans-serif;
+$body-font-family: 'latoregular',
+Helvetica,
+Arial,
+sans-serif;
+$latosemibold_italic: 'latosemibold_italic',
+Helvetica,
+Arial,
+sans-serif;
+$latolight_italic: 'latolight_italic',
+Helvetica,
+Arial,
+sans-serif;
+$latolight: 'latolight',
+Helvetica,
+Arial,
+sans-serif;
+$latoitalic: 'latoitalic',
+Helvetica,
+Arial,
+sans-serif;
+$latobold_italic: 'latobold_italic',
+Helvetica,
+Arial,
+sans-serif;
+$latobold: 'latobold',
+Helvetica,
+Arial,
+sans-serif;
+$title-font-family: 'proxima',
+Helvetica,
+Arial,
+sans-serif;
 $body-antialiased: true;
 $global-margin: 16px;
 $global-padding: 16px;
 $global-position: 16px;
-
 // 3. Title
 // ---------
-
 * {
   margin: 0;
   padding: 0;
@@ -53,6 +75,7 @@ h3,
 h4 {
   font-family: $title-font-family;
   font-weight: 700;
+  margin: 0;
 }
 
 h1 {
@@ -82,17 +105,25 @@ section {
   @extend %clear;
 }
 
-.main-block__dickription {
+.main-block__description {
   font-family: $latolight;
   font-size: 30px;
   text-transform: uppercase;
   text-align: center;
 }
 
+
 .btn {
   width: 370px;
   height: 58px;
+  display: inline-block;
   border-radius: 3px;
   color: $white;
   background: $red;
+  text-align: center;
+  color: $white;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 58px;
+  text-transform: uppercase;
 }
