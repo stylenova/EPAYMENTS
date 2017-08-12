@@ -3,12 +3,12 @@
 $red: #DB2121;
 $light-gray: #F3F3F3;
 $medium-gray: #e2e2e2;
-$bark-gray: #999999;
-$bark-blue :#1c202b;
+$dark-gray: #999999;
+$dark-blue :#1c202b;
 $black: #000000;
 $white: #ffffff;
 // нужно для миксина, цветовые примеси
-$color-stack: (group: orange, id: normal, color: #e67835),
+$color-stack: (group: $light-gray, id: normal, color: #999999),
 (group: orange, id: pale, color: #f8a878),
 (group: orange, id: dark, color: #ad490c),
 (group: blue, id: normal, color: #426682);
@@ -59,6 +59,7 @@ $global-position: 16px;
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -66,7 +67,6 @@ body {
   font-size: 16px;
   line-height: $global-lineheight;
   color: $body-font-color;
-  background: #ccc;
 }
 
 h1,
@@ -95,6 +95,7 @@ img {
 }
 
 section {
+  position: relative;
   padding: 90px 0;
 }
 
@@ -112,7 +113,6 @@ section {
   text-align: center;
 }
 
-
 .btn {
   width: 370px;
   height: 58px;
@@ -126,4 +126,67 @@ section {
   font-weight: 700;
   line-height: 58px;
   text-transform: uppercase;
+}
+
+// Форма Пополнить кошелек
+.form-replenish {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  background: url("/img/background/bg-mesh-2.png")no-repeat center center;
+  background-size: cover;
+}
+.window-form {
+  margin: -30px 0px -90px;
+  padding: 130px 100px 65px;
+  border: 2px dashed $dark-gray;
+  background: #fdfdfd;
+  background: -moz-linear-gradient(top, #fdfdfd 0%, #f0f0f0 100%);
+  background: -webkit-linear-gradient(top, #fdfdfd 0%, #f0f0f0 100%);
+  background: linear-gradient(to bottom, #fdfdfd 0%, #f0f0f0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#f0f0f0', GradientType=0);
+  z-index: 2;
+
+  .window-form__h2 {
+    position: relative;
+    margin-bottom: 40px;
+    line-height: 1;
+    text-align: center;
+    font-size: 36px;
+    font-family: $title-font-family;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: $black;
+
+    &::before {
+      @include pseudo;
+      top: -97px;
+      left: 50%;
+      right: 50%;
+      width: 45px;
+      height: 70px;
+      background: url("/img/icon/icon-index.png");
+      transform: translate(-50%);
+    }
+  }
+
+  form {
+    @include justify;
+  }
+
+  input {
+    @include input($dark-gray,$dark-gray,grey,.5s, 49%, 2px);
+  }
+
+  .form-replenish__btn {
+    background: $red;
+    color: $white;
+    border: none;
+    padding: 11px 22px;
+    text-align: center;
+    text-align-last: center;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
 }

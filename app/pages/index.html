@@ -57,9 +57,15 @@
   <!-- Form replenish  -->
   <section class="form-replenish">
     <div class="conteiner">
-      <form action="">
-        <input type="text">
-      </form>
+      <div class="window-form">
+        <h2 class="window-form__h2">пополнить кошелек</h2>
+        <form id="replenish" action="#" name="replenish"  method="post">
+          <input id="tel" type="tel" placeholder="Номер телефона" onkeyup="return proverka(this);" required>
+          <input id="id-account" type="text" placeholder="#id счета" required>
+          <input id="sum" type="text" placeholder="Сумма в рублях" required>
+          <input class="form-replenish__btn" type="submit">
+        </form>
+      </div>
     </div>
   </section>
   <!-- end Form replenish  -->

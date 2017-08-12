@@ -8,7 +8,6 @@
   nav {
     position: relative;
     width: 100%;
-    float: right;
     padding: 18px 0;
   }
 }
@@ -53,13 +52,15 @@
   }
 
 .menu {
-  width: 100%;
+  width: 51%;
+  float: right;  
   @include rul;
   @include justify;  
   .menu__item {
     display: inline-block;
     font-size: 16px;
     opacity: 1;
+    padding-top: 12px;
   }
   .menu__link {
     position: relative;

@@ -1,9 +1,15 @@
-// max-width: 1170
+/*====================== max-width: 1170 ======================*/ 
 @media (max-width: 1170px) {
   .conteiner {
     width: 100%;
+    padding: 0 20px;
   }
+
+  // Header
   .header {
+    .conteiner {
+      padding: 0;
+    }
     .logo {
       padding-left: 20px;
       img {
@@ -21,6 +27,7 @@
         top: 90px;
         right: 0;
         left: 0;
+        width: 100%;
         background-color: rgba(16, 23, 33, 0.97);
         z-index: 1000;
         opacity: 0;
@@ -35,6 +42,7 @@
       }
       .menu__item {
         display: block;
+        padding-top: 0;
       }
       .menu__link {
         display: block;
@@ -49,26 +57,45 @@
         opacity: 1;
       }
     }
+  } 
+
+  // Форма пополнения кошелька
+  .form-replenish {
+    box-sizing: border-box;
+    .conteiner {
+      padding: 0 50px;
+    }
   }
 }
 
-// max-width: 992
+/*====================== max-width: 992 ======================*/ 
 @media (max-width: 992px) {
   .conteiner {
     width: 100%;
   }
+
+  // Форма пополнения кошелька
+  .window-form {
+    input {
+      width: 100%;
+    }
+  }
 }
 
-// max-width: 768
+/*====================== max-width: 768 ======================*/ 
 @media (max-width: 768px) {
   .conteiner {
     width: 100%;
   }
+
+  // Header
   .header {
     .logo {
       width: 55%;
     }
   }
+
+  // Main-block
   .main-block {
     .main-block__h1 {
       font-size: 33.5px;
@@ -80,26 +107,46 @@
     .main-block__logo-phone img {
       max-width: 100%;
     }
+  } 
+
+  // Форма пополнения кошелька
+  .window-form {
+    padding: 130px 50px 65px;
   }
 }
 
-// max-width: 480
+/*====================== max-width: 480 ======================*/ 
 @media (max-width: 480px) {
   .conteiner {
     width: 100%;
   }
+
+  // Header
   .header {
     .logo {
       width: 70%;
       padding-top: 0;
     }
   }
+
+  // Main block
   .main-block {
     .main-block__h1 {
       font-size: 30px;
     }
     .btn {
       width: 100%;
+    }
+  } 
+
+  // Форма пополнения кошелька
+  .form-replenish .conteiner {
+    padding: 0 20px;
+  }
+  .window-form {
+    padding: 130px 20px 65px;
+    .window-form__h2 {
+      font-size: 30px;
     }
   }
 }
