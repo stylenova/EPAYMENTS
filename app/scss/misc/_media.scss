@@ -66,6 +66,16 @@
       padding: 0 50px;
     }
   }
+
+  // Footer
+  .section-footer {
+    .logo-footer {
+      width: 50%;
+    }
+    .contact {
+      width: 45%;
+    } 
+  } 
 }
 
 /*====================== max-width: 992 ======================*/ 
@@ -78,6 +88,47 @@
   .window-form {
     input {
       width: 100%;
+    }
+  }
+
+  // Footer
+  .section-footer {
+    .logo-footer,
+    .contact,
+    .contact__vat-namber,
+    .contact__phone {
+      float: none;
+      width: 100%;
+      text-align: center;
+    }
+
+    .logo-footer {
+      width: 60%;
+      margin: auto;
+      margin-bottom: 40px;
+
+      &::before {
+      left: inherit;
+        right: 0 !important;
+      }
+      a img {
+      width: 100%;
+      height: auto;
+      }
+    }
+
+    .contact__email {
+      display: inline-block;
+    }
+  }
+  
+  .block-info {
+    .text-coper,
+    .text-info {
+      width: 100%;
+      p {
+        text-align: center;
+      }
     }
   }
 }
@@ -111,7 +162,7 @@
 
   // Форма пополнения кошелька
   .window-form {
-    padding: 130px 50px 65px;
+    padding: 130px 50px 40px;
   }
 }
 
@@ -144,9 +195,16 @@
     padding: 0 20px;
   }
   .window-form {
-    padding: 130px 20px 65px;
+    padding: 130px 20px 40px;
     .window-form__h2 {
       font-size: 30px;
+    }
+  }
+
+    // Footer
+  .section-footer {
+    .logo-footer {
+      width: 75%;
     }
   }
 }

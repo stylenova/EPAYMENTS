@@ -1,0 +1,81 @@
+.section-footer {
+  width: 100%;
+  height: auto;
+  padding: 130px 0 40px;
+  background: url("/img/background/bg-footer.jpg")no-repeat center center;
+  background-size: cover;
+  color: $white;
+  .logo-footer,
+  .contact {
+    float: left;
+    width: 45%;
+  }
+  .logo-footer {
+    position: relative;
+    &::before {
+      @include pseudo(block,
+      absolute,
+      'Номер в реестре FCA: 900172');
+      height: auto;
+      bottom: -20px;
+      left: 45.1%;
+      font-size: 15px;
+      font-family: $latolight;
+    }
+  }
+  .contact {
+    float: right;
+    width: 55%;
+    padding-top: 10px;
+  }
+  .contact__vat-namber,
+  .contact__phone {
+    float: left;
+    width: 47%;
+    margin-bottom: 20px;
+  }
+  .contact__vat-namber,
+  .contact__phone a {
+    text-transform: uppercase;
+  }
+  .contact__phone,
+  .contact__email {
+    a {
+      color: $white;
+      display: block;
+    }
+  }
+  .contact__email {
+    position: relative;
+    padding-left: 30px;
+    clear: both;
+    &:before {
+      @include pseudo;
+      left: 0;
+      top: 0;
+      width: 22px;
+      height: 22px;
+      background: url("/img/icon/icon-leng-ru.png") no-repeat center center;
+    }
+  }
+}
+
+
+// Block-info
+.block-info {
+  padding: 40px 0;
+
+   p {
+     margin-bottom: 15px;
+     font-size: 10px;
+   }
+
+  .text-coper,
+  .text-info {
+    width: 15%;
+    float: left;
+  }
+  .text-info {
+    width: 85%;
+  }
+}
