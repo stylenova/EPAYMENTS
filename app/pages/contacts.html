@@ -29,7 +29,7 @@
         <ul class="menu">
           <li class="menu__item"><a href="about.html" class="menu__link">О нас</a></li>
           <li class="menu__item"><a href="how.html" class="menu__link">Как это работает</a></li>
-          <li class="menu__item"><a href="contacts.html" class="menu__link">Контакты</a></li>
+          <li class="menu__item"><a href="contatcts.html" class="menu__link">Контакты</a></li>
           <li class="menu__item"><a href="#" class="menu__link registration ">Вход/Регистрация</a></li>
         </ul>
       </nav>
@@ -38,7 +38,7 @@
   <!-- end Header  -->
 
   <!-- Main-block  -->
-  <section class="main-block">
+  <section class="main-block  main-block_mod">
     <div class="container">
       <h1 class="main-block__h1">Пополнение электронного кошелька</h1>
       <p class="main-block__description">
@@ -54,24 +54,21 @@
   </section>
   <!-- end Main-block  -->
 
-  <!-- Form replenish  -->
-  <section class="form-replenish">
-    <div class="container">
-      <div class="window-form">
-        <h2 class="window-form__h2">пополнить кошелек</h2>
-        <form id="replenish" action="#" name="replenish" method="post">
-          <input id="tel" type="tel" placeholder="Номер телефона" onkeyup="return proverka(this);" required>
-          <input id="id-account" type="text" placeholder="#id счета" required>
-          <input id="sum" type="text" placeholder="Сумма в рублях" required>
-          <input class="form-replenish__btn" type="submit">
-        </form>
-      </div>
+
+  <!-- Map  -->
+  <section class="block-map">
+    <div id="map" style="width: 100%; height: 100%"></div>
+    <div class="block-map__tooltip">
+      <h2><span>EPAYMENTS</span> MERCHANT SERVICES</h2>
+      <p>
+        Palladium House, 1-4 Argyll Street, London, United Kingdom, W1F 7LD
+      </p>
     </div>
   </section>
-  <!-- end Form replenish  -->
+  <!-- end Map  -->
 
   <!-- Footer -->
-  <section class="section-footer">
+  <section class="section-footer section-footer_mod">
     <div class="container">
       <footer class="footer">
         <div class="logo-footer">
@@ -122,8 +119,9 @@
       </div>
     </div>
   </section>
-
   <!-- end Info  -->
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEqZAa_Ap-U17Io6EZzcA1VzdhD9UTASo"></script>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>

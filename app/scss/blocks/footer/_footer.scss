@@ -28,6 +28,9 @@
     width: 55%;
     padding-top: 10px;
   }
+  .contact__address {
+    display: none;
+  }
   .contact__vat-namber,
   .contact__phone {
     float: left;
@@ -49,6 +52,7 @@
     position: relative;
     padding-left: 30px;
     clear: both;
+    text-decoration: underline;
     &:before {
       @include pseudo;
       left: 0;

@@ -4,16 +4,19 @@
 @import "_settings";
 
 // Header
-@import "blocks/_header";
+@import "blocks/header/_header";
+@import "blocks/header/_header-mod";
 
 // Pages
-@import "blocks/_main-p";
-@import "blocks/_about-p";
-@import "blocks/_how-p";
-@import "blocks/_contancts-p";
+@import "blocks/pages/_main-p";
+@import "blocks/pages/_about-p";
+@import "blocks/pages/_how-p";
+@import "blocks/pages/_contacts";
+@import "blocks/_popup";
 
 // Footer
-@import "blocks/_footer";
+@import "blocks/footer/_footer";
+@import "blocks/footer/_footer-mod";
 
 // Media
 @import "misc/_media";

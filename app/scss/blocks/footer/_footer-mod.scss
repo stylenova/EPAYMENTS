@@ -1,0 +1,16 @@
+.section-footer.section-footer_mod {
+  padding: 100px 0;
+
+  .contact__address {
+    display: block;
+    .address-text {
+      font-size: 36px;
+      font-family: $latolight;
+      font-weight: 300;
+      color: $white;
+      line-height: 36px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+  }
+}

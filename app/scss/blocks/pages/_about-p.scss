@@ -1,0 +1,243 @@
+/*=============================== About =============================== */
+
+.about {
+  p {
+    line-height: 1.42;
+  }
+  .disc {
+    padding-bottom: 50px;
+  }
+  .disc__logo-text {
+    font-size: 36px;
+    font-family: $latobold;
+    span {
+      color: $red;
+    }
+  }
+  .disc__text {
+    p {
+      font-size: 24px;
+      font-family: $latolight;
+      font-weight: 300;
+    }
+  }
+  .about-list__item {
+    width: 50%;
+    float: left;
+    padding: 0 20px 0 100px;
+  }
+  .about-list__h3,
+  .about-list__text p {
+    margin-bottom: 20px;
+  }
+  .about-list__h3 {
+    position: relative;
+    text-transform: uppercase;
+    font-family: $body-font-family;
+    font-weight: 300;
+    &::before {
+      @include pseudo;
+    }
+  }
+}
+
+
+/*=============================== About white =============================== */
+
+.about_white {
+  padding-bottom: 0;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background: url("/img/background/bg-mesh.png")no-repeat left 70% bottom -65%;
+  .disc {
+    margin-bottom: 70px;
+    border-bottom: 2px dashed $dark-gray;
+    @extend %clear;
+  }
+  .disc__logo-text {
+    float: left;
+    font-size: 24px;
+    width: 34%;
+  }
+  .disc__text {
+    position: relative;
+    float: right;
+    width: 66%;
+    padding-left: 132px;
+    &::before {
+      @include pseudo;
+      left: 17px;
+      width: 87px;
+      height: 96px;
+      background: url("/img/icon/icon-phone-money2.png");
+    }
+  }
+  .about-list__item {
+    margin-bottom: 70px;
+    &:nth-child(2) .about-list__h3:before {
+      top: -41px;
+      left: -104px;
+      width: 80px;
+      height: 80px;
+      background: url("/img/icon/icon-priced.png") no-repeat;
+    }
+    &:nth-child(4) .about-list__h3:before {
+      left: -101px;
+      width: 69px;
+      height: 62px;
+      background: url("/img/icon/icon-stat_.png") no-repeat;
+    }
+    &:nth-child(5) .about-list__h3:before {
+      left: -96px;
+      width: 64px;
+      height: 65px;
+      background: url("/img/icon/icon-smail.png") no-repeat;
+    }
+    &:nth-child(7) .about-list__h3:before {
+      top: -44px;
+      left: -96px;
+      width: 66px;
+      height: 76px;
+      background: url("/img/icon/icon-castle-big.png") no-repeat;
+    }
+    &:nth-child(8) .about-list__h3:before {
+      top: -28px;
+      left: -103px;
+      width: 76px;
+      height: 59px;
+      background: url("/img/icon/icon-chat.png") no-repeat;
+    }
+  }
+  .about-list__h3 {
+    &::before {
+      top: -35px;
+      left: -100px;
+      width: 70px;
+      height: 70px;
+      background: url("/img/icon/icon-money.png") no-repeat;
+    }
+  }
+  .clear {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+
+/*=============================== About dark =============================== */
+
+.about_dark {
+  padding-bottom: 0;
+  background: #1c202b url(/img/background/bt-mob-top-left.jpg)no-repeat left top 0%;
+  color: $white;
+  .disc__logo-text {
+    margin-bottom: 15px;
+  }
+  .clear {
+    margin-bottom: 20px;
+  }
+  .about-list__h3 {
+    &::before {
+      top: -25px;
+      left: -120px;
+      width: 88px;
+      height: 88px;
+      background: #000;
+      border-radius: 50%;
+      border: 1px dashed $white;
+    }
+    &:after {
+      @include pseudo;
+      content: "1";
+      top: -15px;
+      left: -89px;
+      font-size: 48px;
+      color: $red;
+      font-family: $latolight;
+    }
+  }
+  .about-list__item {
+    &:nth-child(2) .about-list__h3:after {
+      content: "2";
+    }
+    &:nth-child(4) .about-list__h3:after {
+      content: "4";
+    }
+  }
+  .about-list__text {
+    padding-left: 30px;
+    .about-list__h4 {
+      position: relative;
+      &:before {
+        @include pseudo;
+        top: 2px;
+        left: -30px;
+        width: 16px;
+        height: 16px;
+        background: url("/img/icon/pt.png");
+      }
+    }
+  }
+}
+
+
+/*=============================== About dark =============================== */
+
+.about_dark2 {
+  padding: 117px 0;
+  background: #1c202b url("/img/background/bt-mob-bottom-right.jpg")no-repeat right bottom 0%;
+  color: $white;
+  .about-list .about-list__item {
+    width: 100%;
+  }
+  .about-list__h3 {
+    position: relative;
+    text-transform: uppercase;
+    font-family: "latoregular", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    &::before {
+      @include pseudo;
+      top: -25px;
+      left: -120px;
+      width: 88px;
+      height: 88px;
+      background: #000;
+      border-radius: 50%;
+      border: 1px dashed #fff;
+    }
+    &::after {
+      content: "4";
+      display: block;
+      position: absolute;
+      top: -15px;
+      left: -89px;
+      font-size: 48px;
+      color: #db2121;
+      font-family: "latolight", Helvetica, Arial, sans-serif;
+    }
+  }
+  .about-list__item {
+    .about-list__text_two-block {
+      width: 50%;
+      float: left;
+      padding-left: 30px;
+    }
+    .about-list__text_two-block:last-child {
+      padding-left: 60px;
+    }
+  }
+  .about-list__text .about-list__h4 {
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 2px;
+      left: -30px;
+      width: 16px;
+      height: 16px;
+      background: url(/img/icon/pt.png);
+    }
+  }
+}

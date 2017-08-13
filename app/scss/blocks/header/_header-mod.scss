@@ -1,0 +1,24 @@
+.main-block.main-block_mod {
+  padding-top: 285px;
+  .container {
+    padding-left: 100px;
+  }
+  .main-block__h1 {
+    text-align: right;
+    &::before {
+      top: -5px;
+      left: -14px;
+    }
+  }
+  .main-block__description {
+    display: inline-block;
+    margin: 0 40px 0 98px;
+  }
+  .main-block__logo-phone {
+    display: none;
+  }
+  .main-block__btn {
+    display: inline-block;
+    vertical-align: text-bottom;
+  }
+}

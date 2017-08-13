@@ -1,13 +1,12 @@
-/*====================== max-width: 1170 ======================*/ 
+/*====================== max-width: 1170 ======================*/
+
 @media (max-width: 1170px) {
-  .conteiner {
+  .container {
     width: 100%;
     padding: 0 20px;
-  }
-
-  // Header
+  } // Header
   .header {
-    .conteiner {
+    .container {
       padding: 0;
     }
     .logo {
@@ -49,7 +48,7 @@
         padding: 10px 0;
         text-align: center;
         color: $white;
-        @include hov-a(none, rgba(255, 255, 255, 0.02));
+        @include hov-a(none, rgba(255, 255, 255, 0.06));
       }
     }
     nav.menu-state-open {
@@ -57,41 +56,51 @@
         opacity: 1;
       }
     }
-  } 
-
-  // Форма пополнения кошелька
+  } // Форма пополнения кошелька
   .form-replenish {
     box-sizing: border-box;
-    .conteiner {
+    .container {
       padding: 0 50px;
     }
-  }
-
-  // Footer
+  } // Footer
   .section-footer {
     .logo-footer {
       width: 50%;
     }
     .contact {
       width: 45%;
-    } 
-  } 
+    }
+  }
+  .about_dark2 .about-list__item .about-list__text_two-block:last-child,
+  .about_dark .about-list .about-list__item:nth-child(4) .about-list__text:last-child {
+    padding-left: 30px;
+  }
+  .about_dark2 .about-list__h3::before,
+  .about_dark .about-list__h3::before {
+    top: -20px;
+    left: -100px;
+    width: 60px;
+    height: 60px;
+  }
+  .about_dark2 .about-list__h3::after,
+  .about_dark .about-list__h3::after {
+    top: -24px;
+    left: -83px;
+  }
 }
 
-/*====================== max-width: 992 ======================*/ 
-@media (max-width: 992px) {
-  .conteiner {
-    width: 100%;
-  }
 
-  // Форма пополнения кошелька
+/*====================== max-width: 992 ======================*/
+
+@media (max-width: 992px) {
+  .container {
+    width: 100%;
+  } // Форма пополнения кошелька
   .window-form {
     input {
       width: 100%;
     }
-  }
-
-  // Footer
+  } // Footer
   .section-footer {
     .logo-footer,
     .contact,
@@ -101,27 +110,30 @@
       width: 100%;
       text-align: center;
     }
-
     .logo-footer {
       width: 60%;
       margin: auto;
       margin-bottom: 40px;
-
       &::before {
-      left: inherit;
+        left: inherit;
         right: 0 !important;
       }
       a img {
-      width: 100%;
-      height: auto;
+        width: 100%;
+        height: auto;
       }
     }
-
-    .contact__email {
-      display: inline-block;
+  }
+  .section-footer.section-footer_mod {
+    .contact__address {
+      .address-text {
+        font-size: 26px;
+      }
     }
   }
-  
+  .contact__email {
+    display: inline-block;
+  }
   .block-info {
     .text-coper,
     .text-info {
@@ -130,23 +142,35 @@
         text-align: center;
       }
     }
+  } // About
+  .about .about-list__item {
+    padding-right: 0;
+  }
+  
+  .about_white {
+    .disc__logo-text,
+    .disc__text {
+      float: none;
+      width: 100%;
+    }
+    .disc__logo-text {
+      margin-bottom: 20px;
+    }
   }
 }
 
-/*====================== max-width: 768 ======================*/ 
-@media (max-width: 768px) {
-  .conteiner {
-    width: 100%;
-  }
 
-  // Header
+/*====================== max-width: 768 ======================*/
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  } // Header
   .header {
     .logo {
       width: 55%;
     }
-  }
-
-  // Main-block
+  } // Main-block
   .main-block {
     .main-block__h1 {
       font-size: 33.5px;
@@ -158,29 +182,51 @@
     .main-block__logo-phone img {
       max-width: 100%;
     }
-  } 
-
-  // Форма пополнения кошелька
+  } // Форма пополнения кошелька
   .window-form {
     padding: 130px 50px 40px;
+  } // Google Map 
+  .block-map {
+    .block-map__tooltip {
+      width: 70%;
+      top: 5%;
+      left: 50%;
+      transform: translate(-50%);
+    }
+  } // About
+  .about .disc__text p {
+    font-size: 20px;
+  }
+  .about_dark2 {
+    padding: 70px 0;
+  }
+  .about_dark2 .about-list__item .about-list__text_two-block,
+  .about_white .about-list__item,
+  .about .about-list__item,
+  .about_dark .about-list .about-list__item:nth-child(4) .about-list__text {
+    width: 100%;
+    float: none;
+  }
+  .about-list .about-list__item  {
+    &:first-child {
+      margin-bottom: 90px;
+    }
   }
 }
 
-/*====================== max-width: 480 ======================*/ 
-@media (max-width: 480px) {
-  .conteiner {
-    width: 100%;
-  }
 
-  // Header
+/*====================== max-width: 480 ======================*/
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+  } // Header
   .header {
     .logo {
       width: 70%;
       padding-top: 0;
     }
-  }
-
-  // Main block
+  } // Main block
   .main-block {
     .main-block__h1 {
       font-size: 30px;
@@ -188,10 +234,8 @@
     .btn {
       width: 100%;
     }
-  } 
-
-  // Форма пополнения кошелька
-  .form-replenish .conteiner {
+  } // Форма пополнения кошелька
+  .form-replenish .container {
     padding: 0 20px;
   }
   .window-form {
@@ -199,12 +243,44 @@
     .window-form__h2 {
       font-size: 30px;
     }
-  }
-
-    // Footer
+  } // Footer
   .section-footer {
     .logo-footer {
       width: 75%;
     }
+  } // Google Map 
+  .block-map {
+    .block-map__tooltip {
+      width: 90%;
+      padding: 20px;
+      h2,
+      p {
+        text-align: left;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+    }
+  } // About
+  .about_white .disc__text {
+    padding-left: 0;
+  }
+  .about .about-list__h3::before,
+  .about .about-list__h3::after,
+  .about_white .disc__text::before,
+  .main-block__h1::before {
+    display: none;
+  }
+  .about_white .about-list__item,
+  .about .about-list__item {
+    padding-left: 0px;
+  }
+}
+
+
+/*====================== max-width: 320 ======================*/
+
+@media (max-width: 320px) {
+  .section-footer .logo-footer::before {
+    bottom: -40px;
   }
 }

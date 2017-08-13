@@ -28,6 +28,10 @@ const replace = require('gulp-replace');
 const isDevelopment = true;
 
 const moduleJS  = [
+'app/js/menu.js',
+'app/js/form.js',
+'app/js/resize.js',
+'app/js/googleMap.js',
 'app/js/main.js'
 ];
 

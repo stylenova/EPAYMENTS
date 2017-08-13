@@ -79,10 +79,15 @@ h4 {
 }
 
 h1 {
-  font-size: 44.5px;
+  font-size: 40.5px;
+  letter-spacing: -0.5px;
   font-weight: 900;
   text-align: center;
   text-transform: uppercase;
+}
+
+ul {
+  @include rul;
 }
 
 a {
@@ -94,12 +99,17 @@ img {
   display: block;
 }
 
+.clear {
+  clear: both;
+  display: table;
+}
+
 section {
   position: relative;
   padding: 90px 0;
 }
 
-.conteiner {
+.container {
   width: $global-width;
   margin: 0 auto;
   box-sizing: border-box;
@@ -136,6 +146,7 @@ section {
   background: url("/img/background/bg-mesh-2.png")no-repeat center center;
   background-size: cover;
 }
+
 .window-form {
   position: relative;
   margin: -33px 0px -90px;
@@ -147,7 +158,6 @@ section {
   background: linear-gradient(to bottom, #fdfdfd 0%, #f0f0f0 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#f0f0f0', GradientType=0);
   z-index: 2;
-
   .window-form__h2 {
     position: relative;
     margin-bottom: 40px;
@@ -158,7 +168,6 @@ section {
     font-weight: 900;
     text-transform: uppercase;
     color: $black;
-
     &::before {
       @include pseudo;
       top: -97px;
@@ -170,15 +179,17 @@ section {
       transform: translate(-50%);
     }
   }
-
   form {
     @include justify;
   }
-
   input {
-    @include input($dark-gray,$dark-gray,grey,.5s, 49%, 2px);
+    @include input($dark-gray,
+    $dark-gray,
+    grey,
+    .5s,
+    49%,
+    2px);
   }
-
   .form-replenish__btn {
     background: $red;
     color: $white;
@@ -189,5 +200,4 @@ section {
     text-transform: uppercase;
     cursor: pointer;
   }
-
 }

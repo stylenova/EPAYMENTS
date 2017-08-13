@@ -1,0 +1,33 @@
+
+// Map
+.block-map {
+  position: relative;
+  width: 100%;
+  height: 670px;
+  padding: 0;
+  .block-map__tooltip {
+    position: absolute;
+    z-index: 4;
+    top: 240px;
+    left: 20%;
+    width: 500px;
+    padding: 25px 40px;
+    box-sizing: border-box;
+    background: $white;
+    border: 1px solid grey;
+    text-align: right;
+    h2 {
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      font-family: $body-font-family;
+      font-size: 24px;
+      span {
+        color: $red;
+      }
+    }
+    p {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+}
