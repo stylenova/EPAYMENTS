@@ -42,6 +42,9 @@
       .menu__item {
         display: block;
         padding-top: 0;
+        span {
+          display: none;
+        }
       }
       .menu__link {
         display: block;
@@ -55,6 +58,30 @@
       .menu {
         opacity: 1;
       }
+    }
+  }
+  .main-block.main-block_mod {
+    padding-top: 365px;
+    .container {
+      padding: 0 20px;
+    }
+    .main-block__h1 {
+      text-align: center;
+      &::before {
+        top: -105px;
+        left: 50%;
+      }
+    }
+    .main-block__description {
+      display: block;
+      margin: 0;
+      margin-bottom: 30px;
+    }
+    .main-block__logo-phone {
+      display: block;
+    }
+    .main-block__btn {
+      display: block;
     }
   } // Форма пополнения кошелька
   .form-replenish {
@@ -146,7 +173,6 @@
   .about .about-list__item {
     padding-right: 0;
   }
-  
   .about_white {
     .disc__logo-text,
     .disc__text {
@@ -207,7 +233,7 @@
     width: 100%;
     float: none;
   }
-  .about-list .about-list__item  {
+  .about-list .about-list__item {
     &:first-child {
       margin-bottom: 90px;
     }
