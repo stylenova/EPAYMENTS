@@ -51,7 +51,7 @@
         padding: 10px 0;
         text-align: center;
         color: $white;
-        @include hov-a(none, rgba(255, 255, 255, 0.06));
+        @include hov-a(none, rgba(255, 255, 255, 0.1));
       }
     }
     nav.menu-state-open {
@@ -113,6 +113,14 @@
   .about_dark .about-list__h3::after {
     top: -24px;
     left: -83px;
+  } // Tabs
+  .payment-rule {
+    .tabs {
+      width: 170px;
+    }
+    .tab__content {
+      width: 65%;
+    }
   }
 }
 
@@ -182,6 +190,17 @@
     .disc__logo-text {
       margin-bottom: 20px;
     }
+  } // How works
+  .steps ul {
+    width: 555px;
+    margin: 0 auto;
+    .steps__list {
+      width: 50% !important;
+      margin-bottom: 20px;
+      &:after {
+        left: 250px;
+      }
+    }
   }
 }
 
@@ -236,6 +255,74 @@
   .about-list .about-list__item {
     &:first-child {
       margin-bottom: 90px;
+    }
+  } // How works
+  .payment-rule {
+    .payment-rule__title {
+      margin-bottom: 50px;
+    }
+    .tabs {
+      width: 100%;
+      padding-left: 0;
+      margin-bottom: 30px;
+      @include justify;
+      .tab {
+        display: inline-block;
+        margin-bottom: 0;
+        &:after {
+          left: 10%;
+          right: 90%;
+          top: -25px;
+          font-size: 16px;
+        }
+      }
+      &:before {
+        top: 13px;
+        left: 0;
+        width: 99%;
+        height: 1px;
+        border-bottom: 1px dashed #999;
+      }
+      .tab.active:before {
+        top: 2px;
+        left: -4px;
+        transform: rotate(90deg);
+      }
+    }
+    .tab__content {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  // How works
+  .how-works__text p {
+    margin-bottom: 100px;
+  }
+  .steps ul {
+    width: 100%;
+    .steps__list {
+      width: 100% !important;
+      margin-bottom: 100px;
+      text-align: center;
+      padding: 0 !important;
+      &:before {
+        top: -60px !important;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%);
+      }
+      &:after {
+        @include triangle(7px, down, $red);
+        right: 50% !important;
+        left: 50% !important;
+        top: 60px;
+        transform: translate(-50%);
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
@@ -299,6 +386,17 @@
   .about_white .about-list__item,
   .about .about-list__item {
     padding-left: 0px;
+  } // How works
+  .payment-rule {
+    .tabs {
+      .tab {
+        display: inline-block;
+        margin-bottom: 0;
+        &:after {
+          font-size: 14px;
+        }
+      }
+    }
   }
 }
 
