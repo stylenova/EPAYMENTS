@@ -68,13 +68,16 @@
     color: #666666;
     text-transform: uppercase;
   }
+  .menu__link.active {
+    color: $red;
+  }
   .entrance:before {
     @include pseudo;
     top: -7px;
     left: -20px;
     width: 16px;
     height: 23px;
-    background: url("/img/icon/icon-castle.png");
+    background: url("../img/icon/icon-castle.png");
   }
 }
 
@@ -105,7 +108,7 @@
   width: 100%;
   height: auto;
   padding-top: 365px;
-  background: url('/img/background/bg-main.jpg')no-repeat center;
+  background: url('../img/background/bg-main.jpg')no-repeat center;
   background-size: cover;
   color: $white;
   p {
@@ -124,7 +127,7 @@
     top: -105px;
     left: 50%;
     right: 50%;
-    background: url("/img/icon/icon-phone-money.png")no-repeat;
+    background: url("../img/icon/icon-phone-money.png")no-repeat;
     width: 172px;
     height: 446px;
     transform: translate(-50%);

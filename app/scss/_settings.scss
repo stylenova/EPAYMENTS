@@ -143,7 +143,7 @@ section {
   width: 100%;
   height: auto;
   padding: 0;
-  background: url("/img/background/bg-mesh-2.png")no-repeat center center;
+  background: url("../img/background/bg-mesh-2.png")no-repeat center center;
   background-size: cover;
 }
 
@@ -175,7 +175,7 @@ section {
       right: 50%;
       width: 45px;
       height: 70px;
-      background: url("/img/icon/icon-index.png");
+      background: url("../img/icon/icon-index.png");
       transform: translate(-50%);
     }
   }

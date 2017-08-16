@@ -17,7 +17,7 @@
 /* Темная положка */
 
 .cover {
-  // display: none;
+  display: none;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -55,8 +55,9 @@
 
 /* внутрений контент */
 
-.popup-content {
-  // display: none;
+.popup-content,
+.popup-content-2 {
+  display: none;
   padding: 30px 40px 40px;
   width: 560px;
   border: 2px dashed #1c202b;
@@ -68,7 +69,12 @@
   left: 50%;
 }
 
-#reg-form {
+// .popup-content {
+//   display: none;
+// }
+
+#reg-form,
+#reg-form-2 {
   .reg-forem__title {
     p {
       font-size: 36px;
@@ -116,6 +122,12 @@
   p {
     text-align: center;
     font-size: 18px;
+  }
+}
+
+#reg-form-2 {
+  input.email {
+    margin-bottom: 30px;
   }
 }
 

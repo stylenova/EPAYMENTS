@@ -32,6 +32,7 @@ const moduleJS  = [
 'app/js/form.js',
 'app/js/tabs.js',
 'app/js/popup.js',
+'app/js/activeMenu.js',
 'app/js/googleMap.js',
 'app/js/main.js'
 ];
