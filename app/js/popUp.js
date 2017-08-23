@@ -11,15 +11,18 @@ var popup = (function () {
 
 
 $(document).ready(function () {
-	$(".registration, .entrance").on('click', function () {
+	$(".registration, .entrance").on('click', function (e) {
+		e.preventDefault();
 		var thisClickPopup = $(this.classList);
+		console.log(thisClickPopup);
 		for (var i = 0; i < thisClickPopup.length; i++) {
 			var thisClassMenu = thisClickPopup[i];
 		}
 
 		var reg = 'registration';
+		var regBtn = 'btn registration';
 		var entrance = 'entrance';
-		if (thisClassMenu === reg) {
+		if (thisClassMenu === reg || thisClassMenu === regBtn) {
 			$(".cover").fadeIn('slow');
 			$(".popup-content").fadeIn('slow');
 		} else {

@@ -1,7 +1,7 @@
 var menu = (function () {
   var init = function () {
     console.log('Подключен Меню');
-  }
+  };
 
   return {
     init: init
