@@ -67,6 +67,11 @@
     font-size: 17px;
     color: #666666;
     text-transform: uppercase;
+
+    &:hover {
+      color: $red;
+      transition:all 300ms linear;
+    }
   }
   .menu__link.active {
     color: $red;
